@@ -1,6 +1,8 @@
 CREATE TABLE users (
 	id SERIAL PRIMARY KEY,
 	user_name VARCHAR,
+	user_type VARCHAR,
+	verified BOOLEAN,
 	display_picture VARCHAR,
 	created_at TIMESTAMP,
 	followers INTEGER
@@ -24,7 +26,8 @@ CREATE TABLE books (
 	id SERIAL PRIMARY KEY,
 	isbn bigint UNIQUE,
 	title VARCHAR,
-	subtitle VARCHAR,
+	subtitle VARCHAR NULL,
+	book_description TEXT,
 	topic VARCHAR,
 	rating INTEGER,
 	cover_page VARCHAR,
@@ -35,14 +38,13 @@ CREATE TABLE books (
 CREATE TABLE book_authors (
 	id SERIAL PRIMARY KEY,
 	book_id INTEGER REFERENCES books(id),
-	author_id INTEGER REFERENCES authors(id),
-	PRIMARY KEY (books_author_id, authors_id)
+	author_id INTEGER REFERENCES authors(id)
 );
 
 CREATE TABLE book_reads (
 	user_id INTEGER REFERENCES users(id),
 	book_id INTEGER REFERENCES books(id),
-	created_at TIMESTAMP
+	created_at TIMESTAMP,
 	PRIMARY KEY (user_id, book_id)
 );
 
@@ -60,7 +62,7 @@ CREATE TABLE reviews (
 	rating REAL,
 	weighted_rating REAL,
 	title VARCHAR,
-	content text,
+	content TEXT,
 	created_at TIMESTAMP
 );
 
@@ -91,7 +93,7 @@ CREATE TABLE posts (
 	user_id INTEGER REFERENCES users(id),
 	book_id INTEGER REFERENCES books(id),
 	title VARCHAR,
-	content text,
+	content TEXT,
 	created_at TIMESTAMP
 );
 
