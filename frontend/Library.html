@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Library</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="text-gray-600 body-font">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span id="title" class="ml-3 text-xl">LIBRARY</span>
+        </a>
+        <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+          <a id="homepagebtn"href="homepage.html" class="mr-5 hover:text-gray-900">Home Page</a>
+          <a id="librarybtn" href = "Library.html"class="mr-5 hover:text-gray-900">Library</a>
+          <a id="reviewbtn" href="review.html" class="mr-5 hover:text-gray-900">Posts</a>
+          
+          <!-- SEARCHBAR -->
+          <div id="searchbox"  class="search">
+
+            <form action="#">
+                <input type="text"
+                       placeholder=" Search Books"
+                       name="search">
+                <button>
+                    <i id="searchbtn" class="fa fa-search"
+                    style="font-size: 18px; padding: 15px;">
+                    </i>
+                    <i id="camerabtn" class="fa fa-camera"
+                    style="font-size: 18px; padding: 15px;">
+                    </i>
+
+                </button>
+            </form>
+        </div>
+
+          
+
+        </nav>
+        <button id="loginbtn" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Login
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+
+    
+
+  </header>
+
+      <!-- SIDEBAR CONTENTS -->
+
+      
+    <div class="wrapper">
+      <input type="checkbox" id="btn" hidden>
+      <label for="btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+      </label>
+      <nav id="sidebar">
+        <div class="title">Side Menu</div>
+        <ul class="list-items">
+          <li><a href="#"><i class="fas fa-leaf"></i>Ayurveda</a></li>
+          <li><a href="#"><i class="fas fa-seedling"></i>Unani</a></li>
+          <li><a href="#"><i class="fas fa-cannabis"></i>Siddha</a></li>
+          <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
+          <li><a href="#"><i class="fas fa-stream"></i>Features</a></li>
+          <li><a href="#"><i class="fas fa-user"></i>About us</a></li>
+          <li><a href="#"><i class="fas fa-globe-asia"></i>Languages</a></li>
+          <li><a href="#"><i class="fas fa-envelope"></i>Contact us</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+    
+      
+
+      <!-- LIBRARY CONTENTS -->
+      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="flex flex-col w-full mb-6 lg:justify-between lg:flex-row md:mb-8">
+          <div class="flex items-center mb-5 md:mb-6 group lg:max-w-xl">
+            <a href="/" aria-label="Item" class="mr-3">
+              <div class="flex items-center justify-center w-16 h-16 rounded-full bg-indigo-50">
+                <svg class="w-12 h-12 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </a>
+            <h2 class="font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl">
+              <span class="inline-block mb-2">The brown fox</span>
+              <div class="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100"></div>
+            </h2>
+          </div>
+          <p class="w-full text-gray-700 lg:text-sm lg:max-w-md">
+            "Sed ut perspiciatis unde omnis iste natus error sit iste voluptatem accusantium doloremque rem aperiam, ipsa eaque quae. Sed ut perspiciatis unde omnis iste."
+          </p>
+        </div>
+        <div class="grid gap-8 row-gap-5 mb-8 lg:grid-cols-3 lg:row-gap-8">
+          <div>
+            <img class="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80" src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
+            <p class="mb-2 text-xl font-bold leading-none sm:text-2xl">
+              Galaxies Orion
+            </p>
+            <p class="text-gray-700">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+            </p>
+          </div>
+          <div>
+            <img class="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80" src="https://images.pexels.com/photos/3182750/pexels-photo-3182750.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
+            <p class="mb-2 text-xl font-bold leading-none sm:text-2xl">
+              Tunguska event
+            </p>
+            <p class="text-gray-700">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+            </p>
+          </div>
+          <div>
+            <img class="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80" src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
+            <p class="mb-2 text-xl font-bold leading-none sm:text-2xl">
+              Yolo ipsum dolor
+            </p>
+            <p class="text-gray-700">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+            </p>
+          </div>
+          <div>
+            <img class="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80" src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
+            <p class="mb-2 text-xl font-bold leading-none sm:text-2xl">
+              Curabitur mattis
+            </p>
+            <p class="text-gray-700">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+            </p>
+          </div>
+          <div>
+            <img class="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80" src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500" alt="" />
+            <p class="mb-2 text-xl font-bold leading-none sm:text-2xl">
+              Leverage agile
+            </p>
+            <p class="text-gray-700">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+            </p>
+          </div>
+          <div>
+            <img class="object-cover w-full h-56 mb-6 rounded shadow-lg md:h-64 xl:h-80" src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
+            <p class="mb-2 text-xl font-bold leading-none sm:text-2xl">
+              Organically grow
+            </p>
+            <p class="text-gray-700">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="extendedlib.html" aria-label="" class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
+            See More
+            <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
+              <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      
+</body>
+</html>

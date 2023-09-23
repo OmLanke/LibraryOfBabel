@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src = "main.js"></script>
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 
@@ -27,25 +29,6 @@
           <a id="librarybtn" href = "Library.html"class="mr-5 hover:text-gray-900">Library</a>
           <a id="reviewbtn" href="review.html" class="mr-5 hover:text-gray-900">Posts</a>
           
-          <!-- SEARCHBAR -->
-          <div id="searchbox"  class="search">
-
-            <form action="#">
-                <input type="text"
-                       placeholder=" Search Books"
-                       name="search">
-                <button>
-                    <i id="searchbtn" class="fa fa-search"
-                    style="font-size: 18px; padding: 15px;">
-                    </i>
-                    <i id="camerabtn" class="fa fa-camera"
-                    style="font-size: 18px; padding: 15px;">
-                    </i>
-
-                </button>
-            </form>
-        </div>
-
           
 
         </nav>
@@ -55,10 +38,36 @@
           </svg>
         </button>
       </div>
-
-    
-
   </header>
+
+
+  <!-- SEARCHBAR -->
+  <div id="searchbox"  class="search">
+
+    <form action="#">
+        <input type="text"
+        id = "searchbar"
+        onkeyup = "search_animal()"
+               placeholder=" Search Books"
+               name="search">
+               <!-- <input id="searchbar" onkeyup="search_animal()" type="text" name="search"> -->
+                <ul id="list-holder">
+                </ul>
+        <button>
+            <i id="searchbtn" class="fa fa-search"
+            style="font-size: 18px; padding: 15px;">
+            </i>
+            <i id="camerabtn" class="fa fa-camera"
+            style="font-size: 18px; padding: 15px;">
+            <form action="#">
+              <input type="file" id="myFile" name="filename">
+              <input type="submit">
+            </form>
+            </i>
+
+        </button>
+    </form>
+</div>
 
       <!-- HOMEPAGE START -->
 
