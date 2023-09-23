@@ -57,7 +57,8 @@ CREATE TABLE reviews (
 	user_id INTEGER REFERENCES users(id),
 	book_id INTEGER,
 	PRIMARY KEY (user_id, book_id),
-	rating INTEGER,
+	rating REAL,
+	weighted_rating REAL,
 	title VARCHAR,
 	content text,
 	created_at TIMESTAMP
