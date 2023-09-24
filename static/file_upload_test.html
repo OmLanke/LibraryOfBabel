@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+</head>
+<body>
+    <form id="form">
+        <input type="file" id="file" name="file" multiple>
+        <button type="submit">Upload</button>
+    </form>
+
+    <script>
+        const form = document.getElementById("form");
+        const inputFile = document.getElementById("file");
+        const formData = new FormData();
+
+        const handleSubmit = (event) => {
+            event.preventDefault();
+
+            for (const file of inputFile.files) {
+                formData.append("files", file);
+            }
+
+            fetch("http://192.168.29.101:8000/api/upload/image", {
+                method: "POST",
+                body: formData,
+            })
+            .then(async response => {
+                if (response.ok) {
+                    console.log("File(s) uploaded successfully!");
+                    let filename = await response.text();
+                    fetch(`http://192.168.29.101:8000/api/ocr/${filename}?language=hin`).then((a) => {
+                        console.log(JSON.parse(a));
+                    }).catch((error) => ("Something went wrong!", error));
+                } else {
+                    console.error("Error uploading file(s).");
+                }
+            })
+            .catch((error) => {
+                console.error("Something went wrong!", error);
+            });
+        };
+
+        form.addEventListener("submit", handleSubmit);
+    </script>
+</body>
+</html>
