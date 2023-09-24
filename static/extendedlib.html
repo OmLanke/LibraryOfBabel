@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="library.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Library</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="text-gray-600 body-font">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+          <span id="title" class="ml-3 text-xl">Library</span>
+        </a>
+        <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+          <a id="homepagebtn" href="index.html" class="mr-5 hover:text-gray-900">Home Page</a>
+          <a id="librarybtn" href = "Library.html"class="mr-5 hover:text-gray-900">Library</a>
+          <a id="reviewbtn" href="review.html" class="mr-5 hover:text-gray-900">Post Review</a>
+          
+          
+
+        </nav>
+        <button id="loginbtn" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><a href="login.html">Login</a>
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+  </header>
+
+
+  <!-- SEARCHBAR -->
+  <div id="searchbox"  class="search">
+
+    <form action="#">
+        <input type="text"
+        id = "searchbar"
+        onkeyup = "search_animal()"
+               placeholder=" Search Books"
+               name="search">
+               <!-- <input id="searchbar" onkeyup="search_animal()" type="text" name="search"> -->
+                <ul id="list-holder">
+                </ul>
+        <button>
+            <i id="searchbtn" class="fa fa-search"
+            style="font-size: 18px; padding: 15px;">
+            </i>
+            <select class="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
+              <option>English</option>
+              <option>Hindi</option> 
+            </select>
+            <i id="camerabtn" class="fa fa-camera"
+            style="font-size: 18px; padding: 30px;">
+            
+            <form action="#">
+              <input type="file" id="myFile" name="filename">
+              <input type="submit">
+            </form>
+            </i>
+
+        </button>
+    </form>
+</div>
+
+  
+  <!-- Extended Library -->
+   <!-- GRID 1 -->
+  <h1 id="Ayurveda" align="center">Ayurveda</h1>
+
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="grid gap-5 row-gap-5 mb-8 lg:grid-cols-4 sm:grid-cols-2">
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">The doctor said</h6>
+              <p class="text-sm text-gray-900">
+                Sportacus andrew weatherall goose Refined gentlemen super mario des lynam alpha trion zap rowsdower.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3182750/pexels-photo-3182750.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Skate ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">They urge you</h6>
+              <p class="text-sm text-gray-900">
+                A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Baseball ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless. Schraeder drop gondy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">The doctor said</h6>
+              <p class="text-sm text-gray-900">
+                Sportacus andrew weatherall goose Refined gentlemen super mario des lynam alpha trion zap rowsdower.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Skate ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">They urge you</h6>
+              <p class="text-sm text-gray-900">
+                A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Baseball ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless. Schraeder drop gondy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+  </div>
+  
+  <!-- GRID 2 -->
+  <h1 id="unani" align="center">Unani</h1>
+
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="grid gap-5 row-gap-5 mb-8 lg:grid-cols-4 sm:grid-cols-2">
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">The doctor said</h6>
+              <p class="text-sm text-gray-900">
+                Sportacus andrew weatherall goose Refined gentlemen super mario des lynam alpha trion zap rowsdower.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3182750/pexels-photo-3182750.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Skate ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">They urge you</h6>
+              <p class="text-sm text-gray-900">
+                A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Baseball ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless. Schraeder drop gondy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">The doctor said</h6>
+              <p class="text-sm text-gray-900">
+                Sportacus andrew weatherall goose Refined gentlemen super mario des lynam alpha trion zap rowsdower.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Skate ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">They urge you</h6>
+              <p class="text-sm text-gray-900">
+                A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Baseball ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless. Schraeder drop gondy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+  </div>
+  
+  <!-- Grid 3 -->
+  <h1 id="siddha" align="center">Siddha</h1>
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="grid gap-5 row-gap-5 mb-8 lg:grid-cols-4 sm:grid-cols-2">
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">The doctor said</h6>
+              <p class="text-sm text-gray-900">
+                Sportacus andrew weatherall goose Refined gentlemen super mario des lynam alpha trion zap rowsdower.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3182750/pexels-photo-3182750.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Skate ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">They urge you</h6>
+              <p class="text-sm text-gray-900">
+                A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Baseball ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless. Schraeder drop gondy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">The doctor said</h6>
+              <p class="text-sm text-gray-900">
+                Sportacus andrew weatherall goose Refined gentlemen super mario des lynam alpha trion zap rowsdower.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Skate ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">They urge you</h6>
+              <p class="text-sm text-gray-900">
+                A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Baseball ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless. Schraeder drop gondy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+  </div>
+  <!-- Grid 4 -->
+  <h1 id="othbooks" align="center">Other Medical Books</h1>
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div class="grid gap-5 row-gap-5 mb-8 lg:grid-cols-4 sm:grid-cols-2">
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">The doctor said</h6>
+              <p class="text-sm text-gray-900">
+                Sportacus andrew weatherall goose Refined gentlemen super mario des lynam alpha trion zap rowsdower.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3182750/pexels-photo-3182750.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Skate ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">They urge you</h6>
+              <p class="text-sm text-gray-900">
+                A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Baseball ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless. Schraeder drop gondy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">The doctor said</h6>
+              <p class="text-sm text-gray-900">
+                Sportacus andrew weatherall goose Refined gentlemen super mario des lynam alpha trion zap rowsdower.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Skate ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">They urge you</h6>
+              <p class="text-sm text-gray-900">
+                A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="/" aria-label="View Item" class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2">
+        <div class="flex flex-col h-full">
+          <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="object-cover w-full h-48" alt="" />
+          <div class="flex-grow border border-t-0 rounded-b">
+            <div class="p-5">
+              <h6 class="mb-2 font-semibold leading-5">Baseball ipsum dolor</h6>
+              <p class="text-sm text-gray-900">
+                Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless. Schraeder drop gondy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+  </div>
+  
+</body>
+</html>
