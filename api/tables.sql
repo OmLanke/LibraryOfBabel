@@ -3,9 +3,8 @@ CREATE TABLE IF NOT EXISTS users (
 	user_name VARCHAR,
 	user_type VARCHAR,
 	verified BOOLEAN,
-	display_picture VARCHAR,
+	display_picture VARCHAR NULL,
 	created_at TIMESTAMP DEFAULT current_timestamp,
-	followers INTEGER
 );
 
 CREATE TABLE IF NOT EXISTS authors (
@@ -27,6 +26,7 @@ CREATE TABLE IF NOT EXISTS books (
 	isbn bigint UNIQUE NULL,
 	title VARCHAR,
 	subtitle VARCHAR NULL,
+	author_id INTEGER REFERENCES authors(id),
 	book_description TEXT,
 	topic VARCHAR,
 	rating REAL,
@@ -34,12 +34,6 @@ CREATE TABLE IF NOT EXISTS books (
 	cover_page VARCHAR,
  	published_at TIMESTAMP NULL,
 	created_at TIMESTAMP DEFAULT current_timestamp
-);
-
-CREATE TABLE IF NOT EXISTS book_authors (
-	id SERIAL PRIMARY KEY,
-	book_id INTEGER REFERENCES books(id),
-	author_id INTEGER REFERENCES authors(id)
 );
 
 CREATE TABLE IF NOT EXISTS book_reads (
