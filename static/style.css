@@ -1,0 +1,10 @@
+#searchbox{
+    width: 100%;
+}
+/* #searchbox input searchbar{
+    margin-left: 70px;
+} */
+#searchbar{
+    margin-left: 200px;
+    margin-right: 0px;
+}
