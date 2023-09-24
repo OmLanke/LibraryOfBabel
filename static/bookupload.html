@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Upload</title>
+</head>
+<style>
+    body {
+        font-family: 'Ubuntu Mono', monospace;
+        margin: 0px;
+        padding: 0px;
+        
+        color: rgb(255, 255, 255);
+
+    }
+
+    .left {
+        /*border: 2px solid yellow;*/
+        display: inline-block;
+        position: absolute;
+        left: 25px;
+        top: 12px;
+
+
+    }
+
+    .left img {
+        width: 90px;
+        margin: 12px 20px;
+    }
+
+    .mid {
+        /*border: 2px solid orangered;*/
+        display: block;
+        width: 40%;
+        margin: 15px auto;
+
+    }
+
+    .right {
+        /*border: 2px solid rgb(37, 218, 231);*/
+        display: inline-block;
+        position: absolute;
+        right: 25px;
+        top: 12px;
+    }
+
+    .navbar {
+        display: inline-block;
+
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 20px;
+        padding: 15px;
+
+    }
+
+    .navbar li a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+
+    }
+
+    .navbar li a:hover {
+        color: grey;
+        text-decoration: underline;
+
+
+    }
+
+    .left div {
+        font-size: 22px;
+        text-align: center;
+
+    }
+
+    .btn {
+        align-items: center;
+        padding: 15px 25px;
+        margin: 23px 8px;
+        border-radius: 12px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        font-family: 'Ubuntu', sans-serif;
+        font-family: 'Ubuntu Mono', monospace;
+    }
+
+    .btn:hover {
+        background-color: rgb(86, 86, 87);
+    }
+
+    .container {
+        border: 2px solid white;
+        margin: 85px 23px;
+        padding: 84px 2px;
+        border-radius: 10px;
+        width: 33%;
+    }
+
+    .form-group input {
+
+        text-align: center;
+        display: block;
+        padding: 6px;
+        width: 81%;
+        border: 2px solid black;
+        margin: 12px auto;
+        font-size: 18px;
+        border-radius: 12px;
+        font-family: 'Ubuntu', sans-serif;
+        font-family: 'Ubuntu Mono', monospace;
+    }
+
+    .container h1 {
+        text-align: center;
+    }
+
+    .container button {
+        display: block;
+        width: 85%;
+        margin: 25px auto;
+    }
+</style>
+
+<body>
+
+<form id="upload"action="#">
+    <input type="file" id="myFile" name="filename">
+    <input type="submit">
+              
+<form action="noaction.php"></form>
+
+<div class="form-group">
+   <label>Title<input id="book" type="text" name="" placeholder="Enter your Book Title"></label>
+
+</div>
+
+<div class="form-group">
+    <label>Author<input  id="author" type="text" name="" placeholder="Enter name of the Author"></label>
+
+</div>
+
+<div class="form-group">
+    <label>Description<input id="description"type="text" name="" placeholder="Enter the Description"></label>
+
+</div>
+
+<div class="form-group">
+    <label>Topic<input id="topic" type="text" name="" placeholder="Enter the Topic"></label>
+
+</div>
+<button id="btn">Submit </button>
+
+<script>
+    var myBook=document.getElementById("book");
+    var myAuthor=document.getElementById("author");
+    var myDescription=document.getElementById("description");
+    var myTopic=document.getElementById("topic");
+    var button=document.getElementById("btn");
+
+    button.addEventListener("click",()=>{
+
+        var obj={
+            title:myBook.value,
+            author_name:myAuthor.value,
+            book_description:myDescription.value,
+            topic:myTopic.value
+        };
+
+        fetch("http://192.168.29.101:8000/api/book",{
+            method:"POST",
+            // headers:{
+            //     "Content-type":"application/json"
+            // },
+            body:JSON.stringify(obj)
+        
+        
+        });
+
+    })
+
+</script>
+
+
+</div>
+</body>
+
+</html>
+    
+</body>
+</html>
